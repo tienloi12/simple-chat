@@ -1,0 +1,11 @@
+<input type="text" [(ngModel)]="roomId" placeholder=" Enter room id ... " />
+<input type="text" [(ngModel)]="userName" placeholder=" Enter your name ... " />
+<button (click)="joinRoom(roomId)"> Join in</button>
+<input type="text" [(ngModel)]="newMessage" placeholder=" Enter your message ... " />
+<button (click)="sendMessage(newMessage)"> Send</button>
+
+<div *ngFor="let msg of messages">
+  <p>From: {{msg.from}}</p>
+  <p>msg: {{msg.msg}}</p>
+
+</div>
